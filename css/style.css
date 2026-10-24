@@ -1,5 +1,13 @@
 /* MISE EN PLESS â€” main stylesheet */
-@font-face{font-family:"Horizon";src:url("../fonts/horizon.woff2") format("woff2");font-display:swap}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+@font-face {
+  font-family: 'Horizon';
+  src: url('./fonts/Horizon.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* @font-face{font-family:"Horizon";src:url("../fonts/horizon.woff2") format("woff2");font-display:swap} */
 :root{--bg:#2E0607;--red:#CC0000;--ink:#F4D9D6;--deep:#1c0304;--line:rgba(244,217,214,.22);
 --display:"Horizon","Arial Black","Helvetica Neue",Arial,sans-serif;
 --text:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--pad:clamp(1.25rem,4vw,3.5rem)}
