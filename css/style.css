@@ -1020,3 +1020,139 @@ footer ul a:hover {
     transition: none !important;
   }
 }
+
+
+/* ==========================================
+   MISE EN PLESS — EDITORIAL IMAGE SCROLLER
+   ========================================== */
+
+.gallery-scroller {
+  padding: clamp(4rem, 9vw, 8rem) 0 2rem !important;
+  overflow: hidden;
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+}
+
+.gallery-intro {
+  padding: 0 var(--pad);
+  margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.gallery-intro .eyebrow {
+  margin-bottom: 1.5rem;
+}
+
+.gallery-intro h2 {
+  max-width: 900px;
+  font-family: var(--display);
+  font-size: clamp(2.8rem, 7vw, 7rem);
+  line-height: .95;
+  letter-spacing: -.025em;
+}
+
+.gallery-description {
+  max-width: 440px;
+  margin-top: 1.5rem;
+  color: var(--ink);
+  font-family: var(--text);
+  font-size: clamp(.95rem, 1.3vw, 1.1rem);
+  line-height: 1.8;
+}
+
+/* Horizontal, swipeable image strip */
+
+.gallery-gallery {
+  display: flex;
+  gap: clamp(.75rem, 1.5vw, 1.4rem);
+  padding: 0 var(--pad) 1.5rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: var(--pad);
+  scrollbar-width: thin;
+  scrollbar-color: var(--red) var(--deep);
+  -webkit-overflow-scrolling: touch;
+}
+
+.gallery-card {
+  flex: 0 0 clamp(230px, 29vw, 410px);
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+.gallery-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background: #481012;
+  border: 1px solid var(--line);
+  transition: transform .4s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(.985);
+}
+
+.gallery-card figcaption {
+  padding-top: .8rem;
+  color: var(--ink);
+  font-family: var(--text);
+  font-size: .68rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+/* Bottom caption */
+
+.gallery-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem var(--pad) 0;
+  margin-top: .5rem;
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+  font-family: var(--text);
+  font-size: .7rem;
+  letter-spacing: .06em;
+}
+
+.gallery-scroll-hint {
+  color: var(--red);
+  white-space: nowrap;
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .gallery-scroller {
+    padding-top: 4rem !important;
+  }
+
+  .gallery-intro {
+    margin-bottom: 2rem;
+  }
+
+  .gallery-intro h2 {
+    font-size: clamp(2.6rem, 12vw, 4.5rem);
+  }
+
+  .gallery-card {
+    flex-basis: 76vw;
+  }
+
+  .gallery-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-card img {
+    transition: none;
+  }
+}
+
