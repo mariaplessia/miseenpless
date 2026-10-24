@@ -164,10 +164,10 @@ p + p {
 .logo,
 .footer-logo {
   font-family: var(--display);
-  font-size: 1rem;
+  font-size: 3rem;
   font-weight: 400;
   line-height: 1;
-  letter-spacing: .01em;
+  letter-spacing: .0em;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--red);
