@@ -845,16 +845,26 @@ footer ul a:hover {
   border-radius: 0;
 }
 
+
+.hero-gallery {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+}
+
 .hero .hero-video {
-     display: block;
-     width: 100%;
-     height: 100%;
-     max-width: none;
-     object-fit: cover;
-     object-position: center;
-     border: 0;
-     border-radius: 0;
-   }
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center 85%;
+  border: 0;
+  border-radius: 0;
+}
+
 
 .hero .hero-gallery::after {
   content: '';
