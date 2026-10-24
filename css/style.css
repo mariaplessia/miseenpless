@@ -257,7 +257,7 @@ section:not(.hero) {
       var(--deep)
     );
 
-  border: 1px solid var(--line);
+  border: 0;
 }
 
 .feature-copy {
