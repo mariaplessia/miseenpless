@@ -1,18 +1,264 @@
+```html
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Mise en Pless | The craft behind the plate</title><meta name="description" content="A culinary journal and supper club on technique, restraint and the small decisions behind a dish."><meta name="theme-color" content="#2E0607">
-<meta property="og:title" content="Mise en Pless | The craft behind the plate"><meta property="og:description" content="A culinary journal and supper club on technique, restraint and the small decisions behind a dish."><meta property="og:type" content="website">
-<link rel="preload" href="fonts/horizon.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css"></head><body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="bar"><a class="logo" href="index.html">Mise en Pless</a><nav aria-label="Main"><ul><li><a href="index.html" aria-current=page>Home</a></li><li><a href="journal.html">The Journal</a></li><li><a href="supper-club.html">Supper Club</a></li><li><a href="about.html">About</a></li><li><a href="https://www.instagram.com/YOUR_HANDLE">Instagram</a></li><li><a href="https://YOURNAME.substack.com">Substack</a></li></ul></nav></header>
-<main id="main">
-<div class="hero"><div class="ph" role="img" aria-label="Placeholder: replace with a hero photograph"></div>
-<h1>Mise<br>en Pless</h1><div class="tag"><span>the craft behind the plate</span><span>food journal and supper club</span></div></div>
-<section><p class="lede">Food that stays with you, and why. We look at the technique, restraint and care inside a single dish.</p></section>
-<section style="padding-top:0"><ul class="pass"><li><a href="journal.html"><strong>The Journal</strong><em>Essays, recipes and discoveries</em></a></li><li><a href="journal.html"><strong>Things Done Well</strong><em>The formula behind a dish</em></a></li><li><a href="journal.html"><strong>The Dish</strong><em>One plate, taken apart</em></a></li><li><a href="journal.html"><strong>A Celebration Of…</strong><em>One ingredient, at length</em></a></li><li><a href="journal.html"><strong>Places</strong><em>Restaurants and the road</em></a></li><li><a href="supper-club.html"><strong>Supper Club</strong><em>Small tables, set menus</em></a></li></ul></section>
-<section class="feature"><div class="ph rect" role="img" aria-label="Placeholder: photograph for the featured piece"></div>
-<div><h2>Things Done Well</h2><p style="margin-top:1.5rem">Placeholder feature. Replace with the opening of your latest piece: what the dish is, and the one decision that makes it work.</p><a class="more" href="journal.html">Read the journal</a></div></section>
-<section class="band"><h2>Supper Club</h2><p>Intimate dinners built around one idea. Dates and enquiries are announced here first.</p><a href="supper-club.html">Join the list</a></section></main>
-<footer><p>© 2026 Mise en Pless. The craft behind the plate.</p><ul><li><a href="https://www.instagram.com/miseenpless">Instagram</a></li><li><a href="https://YOURNAME.substack.com">Substack</a></li></ul></footer>
-</body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mise en Pless | The craft behind the plate</title>
+
+  <meta
+    name="description"
+    content="A culinary journal and supper club exploring the craft, technique and ideas behind food."
+  >
+
+  <meta name="theme-color" content="#2E0607">
+
+  <meta
+    property="og:title"
+    content="Mise en Pless | The craft behind the plate"
+  >
+  <meta
+    property="og:description"
+    content="A culinary journal and supper club exploring the craft, technique and ideas behind food."
+  >
+  <meta property="og:type" content="website">
+
+  <link
+    rel="preload"
+    href="fonts/horizon.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- HEADER -->
+  <header class="bar">
+    <a class="logo" href="index.html" aria-label="Mise en Pless home">
+      Mise en Pless
+    </a>
+
+    <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+      <a href="journal.html">The Journal</a>
+      <a href="supper-club.html">Supper Club</a>
+      <a href="about.html">About</a>
+      <a href="https://www.instagram.com/miseenpless"
+         target="_blank"
+         rel="noopener noreferrer">Instagram ↗</a>
+    </nav>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="main-navigation"
+    >
+      Menu <span class="menu-symbol" aria-hidden="true">+</span>
+    </button>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO: TWO PHOTOGRAPHS + CENTRAL TEXT -->
+    <section class="hero" aria-labelledby="hero-title">
+
+      <div class="hero-gallery">
+
+        <!-- Replace this placeholder with your first photograph -->
+        <div
+          class="hero-photo hero-photo--left"
+          role="img"
+          aria-label="Placeholder for the first editorial photograph"
+        >
+          <span class="photo-label">Photograph 01</span>
+        </div>
+
+        <!-- Replace this placeholder with your second photograph -->
+        <div
+          class="hero-photo hero-photo--right"
+          role="img"
+          aria-label="Placeholder for the second editorial photograph"
+        >
+          <span class="photo-label">Photograph 02</span>
+        </div>
+
+      </div>
+
+      <div class="hero-copy">
+
+        <p class="eyebrow">The craft behind the plate</p>
+
+        <h1 id="hero-title">
+          Your headline<br>
+          goes here.
+        </h1>
+
+        <p class="hero-description">
+          [Write your own opening statement here. Introduce your
+          perspective on food, craft, technique and the experiences
+          worth remembering.]
+        </p>
+
+        <p class="hero-signature">
+          Food journal <span aria-hidden="true">·</span> Supper club
+        </p>
+
+      </div>
+
+      <a class="hero-scroll" href="#explore">
+        Explore <span aria-hidden="true">↓</span>
+      </a>
+
+    </section>
+
+    <!-- JOURNAL INTRODUCTION -->
+    <section class="intro" id="explore">
+      <p class="eyebrow">A journal of food and experience</p>
+
+      <p class="lede">
+        [A short introduction to Mise en Pless. Replace this text
+        with your own words whenever you're ready.]
+      </p>
+    </section>
+
+    <!-- JOURNAL CATEGORIES -->
+    <section class="journal-index" aria-label="Explore the journal">
+
+      <div class="section-heading">
+        <p class="eyebrow">Explore</p>
+        <h2>The Journal</h2>
+      </div>
+
+      <ul class="pass">
+        <li>
+          <a href="journal.html">
+            <strong>Things Done Well</strong>
+            <em>The thinking and technique behind a dish</em>
+          </a>
+        </li>
+
+        <li>
+          <a href="journal.html">
+            <strong>The Dish</strong>
+            <em>Individual plates, examined closely</em>
+          </a>
+        </li>
+
+        <li>
+          <a href="journal.html">
+            <strong>A Celebration Of…</strong>
+            <em>One ingredient, explored in depth</em>
+          </a>
+        </li>
+
+        <li>
+          <a href="journal.html">
+            <strong>Places</strong>
+            <em>Restaurants, journeys and experiences</em>
+          </a>
+        </li>
+      </ul>
+
+    </section>
+
+    <!-- FEATURED STORY -->
+    <section class="feature" aria-labelledby="feature-title">
+
+      <!-- Replace this placeholder with your featured photograph -->
+      <div
+        class="feature-photo"
+        role="img"
+        aria-label="Placeholder for the featured journal photograph"
+      >
+        <span class="photo-label">Featured photograph</span>
+      </div>
+
+      <div class="feature-copy">
+        <p class="eyebrow">From the journal</p>
+
+        <h2 id="feature-title">Things Done Well</h2>
+
+        <p>
+          [Introduce a featured recipe, dish, ingredient or restaurant.
+          Write the opening that makes someone want to keep reading.]
+        </p>
+
+        <a class="text-link" href="journal.html">
+          Read the journal <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+    </section>
+
+    <!-- SUPPER CLUB -->
+    <section class="band" aria-labelledby="supper-title">
+
+      <p class="eyebrow">Around the table</p>
+
+      <h2 id="supper-title">The Supper Club</h2>
+
+      <p>
+        [Describe the dinners, ideas and experiences you want to bring
+        to the table.]
+      </p>
+
+      <a class="band-link" href="supper-club.html">
+        Discover the supper club <span aria-hidden="true">↗</span>
+      </a>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <a class="footer-logo" href="index.html">Mise en Pless</a>
+
+    <p>© 2026 Mise en Pless. The craft behind the plate.</p>
+
+    <ul>
+      <li><a href="journal.html">The Journal</a></li>
+      <li><a href="about.html">About</a></li>
+      <li>
+        <a href="https://www.instagram.com/miseenpless"
+           target="_blank"
+           rel="noopener noreferrer">Instagram ↗</a>
+      </li>
+    </ul>
+
+  </footer>
+
+  <!-- COMPACT MENU INTERACTION -->
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const navigation = document.querySelector('.main-nav');
+
+    menuButton.addEventListener('click', () => {
+      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      navigation.classList.toggle('is-open', !isOpen);
+
+      menuButton.querySelector('.menu-symbol').textContent =
+        isOpen ? '+' : '−';
+    });
+
+    navigation.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        menuButton.setAttribute('aria-expanded', 'false');
+        navigation.classList.remove('is-open');
+        menuButton.querySelector('.menu-symbol').textContent = '+';
+      });
+    });
+  </script>
+
+</body>
+</html>
+```
