@@ -480,6 +480,7 @@ footer ul a:hover {
     width: 28vw;
   }
 
+
   .hero-copy {
     width: min(100%, 540px);
   }
@@ -843,6 +844,17 @@ footer ul a:hover {
   border: 0;
   border-radius: 0;
 }
+
+.hero .hero-video {
+     display: block;
+     width: 100%;
+     height: 100%;
+     max-width: none;
+     object-fit: cover;
+     object-position: center;
+     border: 0;
+     border-radius: 0;
+   }
 
 .hero .hero-gallery::after {
   content: '';
