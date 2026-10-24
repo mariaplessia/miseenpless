@@ -1427,19 +1427,18 @@ footer ul a:hover {
 }
 
 /* Text column */
-.supper-details > .supper-section {
-  padding: 0;
-  margin: 0;
-}
-
 /* Control spacing between the three sections */
 .supper-details {
   gap: 1.25rem;
 }
 
-/* Remove extra spacing around headings and paragraphs */
+.supper-details > .supper-section {
+  padding: 1rem 0;
+  margin: 0;
+}
+
 .supper-details .supper-section h3 {
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.5rem;
 }
 
 .supper-details .supper-section p {
