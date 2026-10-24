@@ -6,13 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Supper Club | MISE EN PLESS</title>
+
   <meta
     name="description"
     content="Dining experiences centred on food, the table, and the ideas that bring them together."
   >
+
   <meta name="theme-color" content="#2E0607">
 
-  <meta property="og:title" content="Supper Club | Mise en Pless">
+  <meta
+    property="og:title"
+    content="Supper Club | MISE EN PLESS"
+  >
   <meta
     property="og:description"
     content="Dining experiences centred on food, the table, and the ideas that bring them together."
@@ -26,37 +31,38 @@
     type="font/woff2"
     crossorigin
   >
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <!-- Header / Navigation -->
+  <!-- HEADER: MATCHES index.html -->
   <header class="bar">
-    <a class="logo" href="index.html">MISE EN PLESS</a>
+    <a class="logo" href="index.html" aria-label="Mise en Pless home">
+      MISE EN PLESS
+    </a>
 
-    <nav aria-label="Main">
-      <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="journal.html">THE JOURNAL</a></li>
-        <li>
-          <a href="supper-club.html" aria-current="page">SUPPER CLUB</a>
-        </li>
-        <li><a href="about.html">ABOUUT</a></li>
-        <li>
-          <a href="https://www.instagram.com/YOUR_HANDLE">INSTAGRAM</a>
-        </li>
-        <li>
-          <a href="https://YOURNAME.substack.com">Substack</a>
-        </li>
-      </ul>
+    <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+      <a href="journal.html">JOURNAL</a>
+      <a href="supper-club.html" aria-current="page">SUPPER CLUB</a>
+      <a href="about.html">ABOUT</a>
     </nav>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="main-navigation"
+    >
+      Menu <span class="menu-symbol" aria-hidden="true">+</span>
+    </button>
   </header>
 
   <main id="main" class="supper-page">
 
-    <!-- Page heading -->
+    <!-- PAGE INTRODUCTION -->
     <section class="page-head">
       <h1>Supper Club</h1>
       <p>
@@ -65,14 +71,17 @@
       </p>
     </section>
 
-    <!-- Image placeholder + content -->
+    <!-- IMAGE + EDITORIAL CONTENT -->
     <section class="supper-content">
 
-      <div class="supper-image-placeholder"
-           role="img"
-           aria-label="Placeholder for a supper club photograph">
-      </div>
+      <!-- Image placeholder -->
+      <div
+        class="supper-image-placeholder"
+        role="img"
+        aria-label="Supper club photography"
+      ></div>
 
+      <!-- Text column -->
       <div class="supper-details">
 
         <section class="supper-section">
@@ -102,9 +111,7 @@
         <div class="supper-contact">
           <p>
             To inquire, email
-            <a href="mailto:contact@miseenpless.com">
-              contact@miseenpless.com
-            </a>.
+            <a href="mailto:contact@miseenpless.com">contact@miseenpless.com</a>.
           </p>
         </div>
 
@@ -113,15 +120,51 @@
 
   </main>
 
-  <!-- Footer -->
-  <footer>
+  <!-- FOOTER: MATCHES index.html -->
+  <footer class="site-footer">
+
+    <a class="footer-logo" href="index.html">MISE EN PLESS</a>
+
     <p>© 2026 MISE EN PLESS. The craft behind the plate.</p>
+
     <ul>
+      <li><a href="journal.html">THE JOURNAL</a></li>
+      <li><a href="about.html">ABOUT</a></li>
       <li>
-        <a href="https://www.instagram.com/miseenpless">Instagram</a>
+        <a
+          href="https://www.instagram.com/miseenpless"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Instagram ↗</a>
       </li>
     </ul>
+
   </footer>
+
+  <!-- HEADER MENU INTERACTION: MATCHES index.html -->
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const navigation = document.querySelector('.main-nav');
+
+    menuButton.addEventListener('click', () => {
+      const isOpen =
+        menuButton.getAttribute('aria-expanded') === 'true';
+
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      navigation.classList.toggle('is-open', !isOpen);
+
+      menuButton.querySelector('.menu-symbol').textContent =
+        isOpen ? '+' : '−';
+    });
+
+    navigation.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        menuButton.setAttribute('aria-expanded', 'false');
+        navigation.classList.remove('is-open');
+        menuButton.querySelector('.menu-symbol').textContent = '+';
+      });
+    });
+  </script>
 
 </body>
 </html>
