@@ -1427,16 +1427,23 @@ footer ul a:hover {
 }
 
 /* Text column */
-.supper-details {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding-top: 0.25rem;
+.supper-details > .supper-section {
+  padding: 0;
+  margin: 0;
 }
 
-.supper-section {
+/* Control spacing between the three sections */
+.supper-details {
+  gap: 1.25rem;
+}
+
+/* Remove extra spacing around headings and paragraphs */
+.supper-details .supper-section h3 {
+  margin: 0 0 0.35rem;
+}
+
+.supper-details .supper-section p {
   margin: 0;
-  padding: 0;
 }
 
 .supper-section h3 {
