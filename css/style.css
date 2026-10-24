@@ -164,7 +164,7 @@ section:not(.hero) {
   max-width: 800px;
 
   font-family: var(--text);
-  font-size: clamp(1.5rem, 3.2vw, 2.8rem);
+  font-size: clamp(1rem, 2vw, 1.8rem);
   font-weight: 400;
   line-height: 1.4;
 }
