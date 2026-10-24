@@ -1,11 +1,130 @@
+
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The Journal | Mise en Pless</title><meta name="description" content="Essays, recipes, dishes, ingredients and places from Mise en Pless."><meta name="theme-color" content="#2E0607">
-<meta property="og:title" content="The Journal | Mise en Pless"><meta property="og:description" content="Essays, recipes, dishes, ingredients and places from Mise en Pless."><meta property="og:type" content="website">
-<link rel="preload" href="fonts/horizon.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css"></head><body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="bar"><a class="logo" href="index.html">Mise en Pless</a><nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="journal.html" aria-current=page>The Journal</a></li><li><a href="supper-club.html">Supper Club</a></li><li><a href="about.html">About</a></li><li><a href="https://www.instagram.com/YOUR_HANDLE">Instagram</a></li><li><a href="https://YOURNAME.substack.com">Substack</a></li></ul></nav></header>
-<main id="main"><div class="page-head"><h1>The Journal</h1><p>Essays, dishes, ingredients and places.</p></div><section><div class="entries"><a class="entry" href="#"><div class="ph rect" role="img" aria-label="Placeholder image"></div><span>Things Done Well</span><h3>Placeholder: why a good vinaigrette is about order</h3></a><a class="entry" href="#"><div class="ph " role="img" aria-label="Placeholder image"></div><span>A Celebration Of…</span><h3>Placeholder: the anchovy</h3></a><a class="entry" href="#"><div class="ph " role="img" aria-label="Placeholder image"></div><span>The Dish</span><h3>Placeholder: a plate worth the journey</h3></a><a class="entry" href="#"><div class="ph " role="img" aria-label="Placeholder image"></div><span>Places</span><h3>Placeholder: a long lunch somewhere</h3></a><a class="entry" href="#"><div class="ph " role="img" aria-label="Placeholder image"></div><span>Recipe</span><h3>Placeholder: a weeknight supper</h3></a></div></section></main>
-<footer><p>© 2026 Mise en Pless. The craft behind the plate.</p><ul><li><a href="https://www.instagram.com/YOUR_HANDLE">Instagram</a></li><li><a href="https://YOURNAME.substack.com">Substack</a></li></ul></footer>
-</body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>THE JOURNAL | MISE EN PLESS</title>
+
+  <meta
+    name="description"
+    content="The philosophy behind MISE EN PLESS."
+  >
+
+  <meta name="theme-color" content="#2E0607">
+
+  <meta
+    property="og:title"
+    content="THE JOURNAL | MISE EN PLESS"
+  >
+  <meta
+    property="og:description"
+    content="The philosophy behind MISE EN PLESS."
+  >
+  <meta property="og:type" content="website">
+
+  <link
+    rel="preload"
+    href="fonts/horizon.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="bar">
+    <a class="logo" href="index.html" aria-label="Mise en Pless home">
+      MISE EN PLESS
+    </a>
+
+    <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+      <a href="journal.html">JOURNAL</a>
+      <a href="supper-club.html">SUPPER CLUB</a>
+      <a href="about.html" aria-current="page">ABOUT</a>
+    </nav>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="main-navigation"
+    >
+      Menu <span class="menu-symbol" aria-hidden="true">+</span>
+    </button>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="main">
+    <div class="page-head">
+      <h1>THE JOURNAL</h1>
+    </div>
+
+   
+    <section>
+      <div>
+        <h2>The Project</h2>
+    
+        <p>
+          Coming Soon
+        </p>
+
+      </div>
+    
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <a class="footer-logo" href="index.html">MISE EN PLESS</a>
+
+    <p>© 2026 MISE EN PLESS. The craft behind the plate.</p>
+
+    <ul>
+      <li><a href="journal.html">THE JOURNAL</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li>
+        <a
+          href="https://www.instagram.com/miseenpless"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Instagram ↗</a>
+      </li>
+    </ul>
+  </footer>
+
+  <!-- MOBILE MENU INTERACTION -->
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const navigation = document.querySelector('.main-nav');
+
+    menuButton.addEventListener('click', () => {
+      const isOpen =
+        menuButton.getAttribute('aria-expanded') === 'true';
+
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      navigation.classList.toggle('is-open', !isOpen);
+
+      menuButton.querySelector('.menu-symbol').textContent =
+        isOpen ? '+' : '−';
+    });
+
+    navigation.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        menuButton.setAttribute('aria-expanded', 'false');
+        navigation.classList.remove('is-open');
+        menuButton.querySelector('.menu-symbol').textContent = '+';
+      });
+    });
+  </script>
+
+</body>
+</html>
