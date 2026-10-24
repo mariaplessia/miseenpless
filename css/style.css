@@ -161,10 +161,10 @@ section:not(.hero) {
 }
 
 .intro .lede {
-  max-width: 1100px;
+  max-width: 1200px;
 
   font-family: var(--text);
-  font-size: clamp(1rem, 2vw, 1.8rem);
+  font-size: clamp(1rem, 1.8vw, 1.6rem);
   font-weight: 400;
   line-height: 1.4;
 }
