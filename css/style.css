@@ -24,7 +24,6 @@
   --deep: #1c0304;
   --line: rgba(244, 217, 214, .22);
 
-  /* --display: 'Horizon', 'Arial Black', 'Helvetica Neue', Arial, sans-serif; */
   --display: 'Horizon', sans-serif;
   --text: 'DM Sans', sans-serif;
 
@@ -161,7 +160,7 @@ section:not(.hero) {
 }
 
 .intro .lede {
-  max-width: 1000px;
+  max-width: 900px;
 
   font-family: var(--text);
   font-size: clamp(1rem, 1.8vw, 1.6rem);
