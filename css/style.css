@@ -1392,3 +1392,95 @@ footer ul a:hover {
   }
 }
 
+
+/* ========================================
+   SUPPER CLUB PAGE
+======================================== */
+
+.supper-page {
+  width: 100%;
+}
+
+/* Two-column layout: image left, text right */
+.supper-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 5rem);
+
+  width: min(100% - 3rem, 1400px);
+  margin: 4rem auto 0;
+  align-items: start;
+}
+
+/* Image placeholder */
+.supper-image-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+
+  background-color: #F4D9D6;
+
+  /* Replace the background above with your image when ready:
+     background-image: url("../images/supper-club.jpg");
+     background-size: cover;
+     background-position: center;
+  */
+}
+
+/* Text column */
+.supper-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-top: 0.25rem;
+}
+
+.supper-section h2 {
+  margin: 0 0 0.75rem;
+}
+
+.supper-section p {
+  margin: 0;
+  max-width: 42rem;
+}
+
+/* Contact line */
+.supper-contact {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid currentColor;
+}
+
+.supper-contact p {
+  margin: 0;
+}
+
+.supper-contact a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+  .supper-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    width: calc(100% - 2rem);
+    margin-top: 2.5rem;
+  }
+
+  .supper-image-placeholder {
+    aspect-ratio: 4 / 3;
+  }
+
+  .supper-details {
+    gap: 2rem;
+  }
+
+  .supper-contact {
+    margin-top: 0.5rem;
+  }
+}
+
+
