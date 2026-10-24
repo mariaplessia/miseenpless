@@ -737,7 +737,7 @@ footer ul a:hover {
 .bar .main-nav a {
   position: relative;
   color: var(--ink);
-  font-family: var(--text);
+  font-family: var(--display);
   font-size: .8rem;
   font-weight: 500;
   line-height: 1.4;
