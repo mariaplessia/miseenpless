@@ -1393,6 +1393,7 @@ footer ul a:hover {
 }
 
 
+
 /* ========================================
    SUPPER CLUB PAGE
 ======================================== */
@@ -1401,7 +1402,13 @@ footer ul a:hover {
   width: 100%;
 }
 
+/* Default spacing for sections on this page */
 .supper-page section:not(.hero) {
+  padding: 5vw var(--pad);
+}
+
+/* Main Supper Club header spacing */
+.supper-page .page-head {
   padding: 5vw var(--pad);
 }
 
@@ -1416,41 +1423,30 @@ footer ul a:hover {
   align-items: start;
 }
 
-/* Image placeholder */
-.supper-image-placeholder {
+/* Supper club image */
+.supper-image {
+  display: block;
   width: 100%;
   aspect-ratio: 4 / 5;
-
-  background-color: #F4D9D6;
-
-  /* Replace the background above with your image when ready:
-     background-image: url("../images/supper-club.jpg");
-     background-size: cover;
-     background-position: center;
-  */
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Text column */
-/* Control spacing between the three sections */
 .supper-details {
+  display: flex;
+  flex-direction: column;
   gap: 1.25rem;
 }
 
-.supper-details > .supper-section {
-  padding: 5vw 0;
-  margin: 0;
-}
-
-.supper-details .supper-section h3 {
-  margin: 0 0 0.5rem;
-}
-
-.supper-details .supper-section p {
+/* Individual content sections */
+.supper-page .supper-details > .supper-section {
+  padding: 3vw 0;
   margin: 0;
 }
 
 .supper-section h3 {
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.5rem;
   font-size: 1.1rem;
   font-weight: 400;
 }
@@ -1483,22 +1479,26 @@ footer ul a:hover {
   .supper-content {
     grid-template-columns: 1fr;
     gap: 2rem;
-
     width: calc(100% - 2rem);
     margin-top: 2.5rem;
   }
 
-  .supper-image-placeholder {
+  .supper-image {
     aspect-ratio: 4 / 3;
   }
 
   .supper-details {
-    gap: 2rem;
+    gap: 1rem;
+  }
+
+  .supper-page .supper-details > .supper-section {
+    padding: 1rem 0;
   }
 
   .supper-contact {
     margin-top: 0.5rem;
   }
 }
+
 
 
