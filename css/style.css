@@ -1401,6 +1401,10 @@ footer ul a:hover {
   width: 100%;
 }
 
+.supper-page section:not(.hero) {
+  padding: 5vw var(--pad);
+}
+
 /* Two-column layout: image left, text right */
 .supper-content {
   display: grid;
@@ -1434,6 +1438,7 @@ footer ul a:hover {
 
 .supper-details > .supper-section {
   padding: 5vw 0;
+  margin: 0;
 }
 
 .supper-details .supper-section h3 {
