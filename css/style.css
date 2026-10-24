@@ -972,4 +972,347 @@ footer ul a:hover {
     transition: none !important;
   }
 }
-```
+
+/* ==========================================
+   MISE EN PLESS — REVISED HEADER & HERO
+   ========================================== */
+
+/* HEADER */
+
+.bar {
+  position: relative;
+  z-index: 20;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 2rem;
+
+  min-height: 76px;
+  padding: 1.25rem var(--pad);
+
+  background: var(--bg);
+}
+
+/* Brand mark */
+
+.bar .logo {
+  justify-self: start;
+
+  color: var(--red);
+  font-family: var(--display);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: .02em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Desktop navigation */
+
+.bar .main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(1.25rem, 3vw, 3rem);
+}
+
+.bar .main-nav a {
+  color: var(--ink);
+  font-family: var(--text);
+  font-size: .75rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.bar .main-nav a:hover {
+  color: var(--red);
+}
+
+/* Menu toggle: shown on mobile */
+
+.bar .menu-toggle {
+  display: none;
+  justify-self: end;
+
+  align-items: center;
+  gap: .6rem;
+
+  padding: .25rem 0;
+  border: 0;
+  background: transparent;
+
+  color: var(--ink);
+  font-family: var(--text);
+  font-size: .75rem;
+  cursor: pointer;
+}
+
+.bar .menu-symbol {
+  color: var(--red);
+  font-size: 1.2rem;
+}
+
+/* ==========================================
+   FULL-BLEED SPLIT-PHOTO HERO
+   ========================================== */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+
+  display: grid;
+  place-items: center;
+
+  width: 100%;
+  height: calc(100svh - 76px);
+  min-height: 560px;
+
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+
+  background: var(--bg);
+}
+
+/* The two photographs cover the entire hero */
+
+.hero .hero-gallery {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+/* Individual photo panels */
+
+.hero .hero-panel {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+
+  overflow: hidden;
+
+  background: #351012;
+}
+
+/* Absolutely no rotation, inset margins or rounded corners */
+
+.hero .hero-panel--left,
+.hero .hero-panel--right {
+  inset: auto;
+  border: 0;
+  border-radius: 0;
+  transform: none;
+}
+
+/* Photographs fill their half of the screen */
+
+.hero .hero-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+
+  border: 0;
+  border-radius: 0;
+}
+
+/* Subtle darkening for text legibility */
+
+.hero .hero-gallery::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(20, 0, 2, .27);
+
+  pointer-events: none;
+}
+
+/* Central text */
+
+.hero .hero-overlay {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: min(90%, 760px);
+  padding: clamp(1.5rem, 4vw, 3rem);
+
+  text-align: center;
+
+  background: rgba(46, 6, 7, .78);
+}
+
+.hero .hero-overlay .eyebrow {
+  margin-bottom: 1.5rem;
+
+  color: var(--ink);
+  font-family: var(--text);
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.hero .hero-overlay h1 {
+  max-width: 100%;
+
+  color: var(--red);
+  font-family: var(--display);
+  font-size: clamp(2.5rem, 6.5vw, 6rem);
+  font-weight: 400;
+  line-height: .98;
+  letter-spacing: -.015em;
+  text-transform: uppercase;
+}
+
+.hero .hero-description {
+  max-width: 42ch;
+  margin-top: 1.5rem;
+
+  color: var(--ink);
+  font-family: var(--text);
+  font-size: clamp(.9rem, 1.3vw, 1.05rem);
+  line-height: 1.8;
+}
+
+/* Scroll cue */
+
+.hero .hero-scroll {
+  position: absolute;
+  z-index: 3;
+
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+
+  color: var(--ink);
+  font-family: var(--text);
+  font-size: .65rem;
+  letter-spacing: .12em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.hero .hero-scroll span {
+  color: var(--red);
+}
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 650px) {
+
+  .bar {
+    grid-template-columns: 1fr auto;
+    min-height: 64px;
+    padding: 1rem var(--pad);
+  }
+
+  .bar .logo {
+    font-size: .9rem;
+  }
+
+  .bar .menu-toggle {
+    display: flex;
+  }
+
+  .bar .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    padding: .5rem var(--pad) 1rem;
+
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .bar .main-nav.is-open {
+    display: flex;
+  }
+
+  .bar .main-nav a {
+    padding: .85rem 0;
+    border-bottom: 1px solid var(--line);
+    font-size: .8rem;
+  }
+
+  .hero {
+    height: calc(100svh - 64px);
+    min-height: 520px;
+  }
+
+  .hero .hero-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero .hero-overlay {
+    width: 90%;
+    padding: 1.5rem 1rem;
+
+    background: rgba(46, 6, 7, .82);
+  }
+
+  .hero .hero-overlay .eyebrow {
+    font-size: .58rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero .hero-overlay h1 {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+  }
+
+  .hero .hero-description {
+    margin-top: 1rem;
+    font-size: .82rem;
+  }
+
+  .hero .hero-scroll {
+    bottom: 1rem;
+    font-size: .58rem;
+  }
+}
+
+/* Reduced-motion preference */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero *,
+  .bar * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
