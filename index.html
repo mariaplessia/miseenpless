@@ -34,6 +34,68 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
+  
+(() => {
+  const section = document.querySelector('.archive-story');
+  if (!section) return;
+
+  const images = [...section.querySelectorAll('.archive-story__image')];
+  const statements = [...section.querySelectorAll('.archive-story__statement')];
+  const progressFill = section.querySelector('.archive-story__progress-fill');
+  const progressNumber = section.querySelector('.archive-story__progress-number');
+
+  let ticking = false;
+
+  function updateStory() {
+    const rect = section.getBoundingClientRect();
+    const scrollableDistance = section.offsetHeight - window.innerHeight;
+
+    const progress = Math.max(
+      0,
+      Math.min(1, -rect.top / scrollableDistance)
+    );
+
+    // Reveal photographs progressively as the visitor scrolls.
+    images.forEach((image, index) => {
+      const start = index * 0.075;
+      const reveal = Math.max(0, Math.min(1, (progress - start) / 0.2));
+      const eased = reveal * reveal * (3 - 2 * reveal);
+
+      image.style.opacity = eased.toFixed(3);
+      image.style.filter = `blur(${(15 * (1 - eased)).toFixed(2)}px)`;
+      image.style.transform = `scale(${(0.7 + 0.3 * eased).toFixed(3)})`;
+    });
+
+    // Transition between five pieces of editorial copy.
+    const activeIndex = Math.min(
+      statements.length - 1,
+      Math.floor(progress * statements.length)
+    );
+
+    statements.forEach((statement, index) => {
+      statement.classList.toggle('is-active', index === activeIndex);
+    });
+
+    progressFill.style.width = `${progress * 100}%`;
+    progressNumber.textContent =
+      `${String(activeIndex + 1).padStart(2, '0')} / ${String(statements.length).padStart(2, '0')}`;
+
+    ticking = false;
+  }
+
+  function requestUpdate() {
+    if (!ticking) {
+      window.requestAnimationFrame(updateStory);
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', requestUpdate, { passive: true });
+  window.addEventListener('resize', requestUpdate);
+  updateStory();
+})();
+
+
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
